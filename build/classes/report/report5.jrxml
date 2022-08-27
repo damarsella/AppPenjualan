@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="685796c0-46d1-4ddb-96bc-3925c489442d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     stock.`kodestock` AS stock_kodestock,
+     stock.`namakategori` AS stock_namakategori,
+     stock.`namabarang` AS stock_namabarang,
+     stock.`namasatuan` AS stock_namasatuan,
+     stock.`jumlahbarang` AS stock_jumlahbarang
+FROM
+     `stock` stock]]>
+	</queryString>
+	<field name="stock_kodestock" class="java.lang.String"/>
+	<field name="stock_namakategori" class="java.lang.String"/>
+	<field name="stock_namabarang" class="java.lang.String"/>
+	<field name="stock_namasatuan" class="java.lang.String"/>
+	<field name="stock_jumlahbarang" class="java.lang.Integer"/>
+	<variable name="stock_jumlahbarang_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{stock_jumlahbarang}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="43" uuid="7ba08521-5e22-42a3-933d-22845e9dbef3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN STOK BARANG
+PT. CATUR SENTOSA ANUGERAH]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="5" width="160" height="58" uuid="ed1f5220-1d02-4c9e-b273-8d146fc29962"/>
+				<imageExpression><![CDATA["C:\\penjualanelektronikrima\\src\\Images\\Dano Gambar.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="160" y="43" width="240" height="20" uuid="df704d97-7814-4fbc-8de6-701c9ba681bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jln. KH. Hasyim Azhari Kav. DPR Blok A No. 69 - 70]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="9f22a47c-88da-479a-b18b-58049ca23d6f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="111" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="f7bb9848-7a6b-4856-b364-535ba4d44cb7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="222" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="5e45cae4-c468-481a-ab89-558d5354ce47"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="333" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="2b71f390-4860-469a-8a9a-7926b1eecc03"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="84eccf63-8a58-4a85-87c2-737741fc9442"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="10c9b0a4-c9ec-4327-8742-f6358b1a5230"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NOMOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="20" uuid="c8615cbb-3ea9-40e9-8361-35eb220c0f7a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KATEGORI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="20" uuid="cac87775-3826-418c-9f18-84a4593a7625"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="20" uuid="9d570cc1-e071-49d0-a909-699424a3c3c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[SATUAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="f6c868d9-26ee-488a-856c-83aa403b3a75"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JUMLAH]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="111" height="20" uuid="e90ebeb3-2ba5-4364-b306-210388d8db53"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="111" y="0" width="111" height="20" uuid="1689acff-01fe-4b55-80a2-801165982107"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="222" y="0" width="111" height="20" uuid="52ce7a73-10d9-431b-b228-85080fc5fc8b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="333" y="0" width="111" height="20" uuid="ab6fc935-9f77-4460-bc9d-7d17e0e7002c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="0" width="111" height="20" uuid="cc8d52b6-31b6-4b57-99cd-75545c434c29"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="a3a34db1-cbfe-474b-8b8e-1656d85ca42e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stock_kodestock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="adebe140-6d11-41b7-b2c1-6ea6ce4836d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stock_namakategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="25c26108-e4c6-40db-b805-4a49c9d611c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stock_namabarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="6fb0d102-afbb-4c34-8477-3b27024ff309"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stock_namasatuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="95" height="20" uuid="d50878c0-65a6-4a1b-acd3-09ea95c97554"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stock_jumlahbarang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="100" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="355" y="0" width="200" height="20" uuid="7882dadc-ac5f-4216-bf23-268e1b08a32c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Tangerang, "+ new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="355" y="79" width="197" height="20" uuid="1c71a091-1a22-4cad-abff-a4df26d44796"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sandi Wahyudi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="20" width="200" height="20" uuid="eb72cda7-b3b2-4f35-9182-c69f64806ba9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Manager Logistik]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="51b25e11-39c2-43d7-8551-04bb9b857455"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="0" width="111" height="20" uuid="0757d602-dbe1-478b-85a5-001ca7092398"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="499f83d6-f8d8-43eb-816b-fca24bc97d65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[GRAND TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="444" y="0" width="95" height="20" uuid="a0e5fa17-34d1-4be5-98c6-ca4f9a9f7be1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{stock_jumlahbarang_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
